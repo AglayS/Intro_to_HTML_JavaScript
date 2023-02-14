@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<title>Lab 5, Aglay Saenz</title>
+</head>
+
+<body>
+
+
+<script>
+
+//Task 1
+
+var name = prompt("What is your name?", ""); 	//Prompting for name for this task.
+
+	function greet(name) {
+
+		return name;
+
+}
+
+alert("Hello, " + name + "!"); 	//Statement should be "Hello, (name)!"
+
+</script>
+
+<script>
+
+//Task 2
+
+var n = 2; 	//Variables, I used 2 and 4 in this case.
+var m = 4;
+
+		function multiply(n, m) {
+
+	return n * m;
+
+}
+	
+document.write("Product is " + multiply(n, m) + "<br />");
+
+	function add(n, m) {
+
+		return n + m;
+
+}
+
+document.write("Sum is " + add(n, m) + "<br />");
+
+	function square(n) {
+	
+		function multiply (n, n) {
+
+			return n * n;
+	
+	}
+
+	return multiply (n, n);
+}
+
+document.write("The square is " + square(n) + "<br />");
+
+var a = eval(prompt("Value of a?", ""));
+var b = eval(prompt("Value of b?", ""));
+var c = eval(prompt("Value of c?", ""));
+var x = eval(prompt("Value of x?", ""));
+
+	function calculate_quadratic(a, b, c ,x) {
+
+		var result = multiply(a, square(x)) + multiply(b, x) + c; 	//All previous functions used.
+
+			return result; //Less confusing.
+
+} 
+
+
+document.write("The quadratic is " + calculate_quadratic(a, b, c, x) + "<br />" + "<br />");
+
+
+</script>
+
+
+<script>
+
+
+//Task 3
+
+
+var another = true;		//The interesting while loop is added.
+
+while (another == true) { 
+
+
+function calculateTip(total, tipPercent) {
+
+	return total * tipPercent;
+
+}
+
+
+var total = eval(prompt("Total tab?", ""));
+var tipPercent = parseFloat(prompt("What is your tip percent? Enter as decimal number", "%")); 
+
+var tip = calculateTip(total, tipPercent);
+var tab = tip + total;
+
+
+document.write("Your bill is $" + total + "<br />");
+document.write("Your tip is $" + calculateTip(total, tipPercent) + "<br />");
+document.write("Your total is $" + tab + "<br />");
+
+another = confirm("Do you want another calculation? Cancel to end.");
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
