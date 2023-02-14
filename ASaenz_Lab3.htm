@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Lab 3</title>
+</head>
+
+<body>
+
+<script>
+
+//To see prompts, refresh the page. I assumed these had to all be prompts.
+
+//Task 1 for Lab 3
+
+
+var age = prompt("What is your age?", "");
+
+if (age >= 21) {
+	alert("That's cool!");
+}
+else {
+	alert("That's young!")
+}
+
+var vote = prompt("If over 21, are you registerd to vote? Yes or No?", "");
+
+if (vote == "Yes") {
+	alert("Don't forget to vote this November!");
+}
+else {
+	alert("Go get registered!");
+}
+
+
+//Task 2 for Lab 3
+
+
+var temp = parseFloat(prompt("What is the temperature in Fahrenheit?", ""));
+
+function FahrenheitToCelsius(temp) {
+	return (5 / 9) * (temp - 32);
+}
+
+alert("The temperature is " + (FahrenheitToCelsius(temp)) + " degrees Celsius outside. Or in Fahrenheit it is "+  temp + " degrees.");
+
+
+//Task 3 for Lab 3
+
+
+var x = prompt("You have how many U.S dollars?", "");
+
+//One U.S dollar equals 31.25 baht.
+
+function baht(x) {
+	return (x * 31.25);
+}
+
+alert("Then you have " + (baht(x)) + " Thai baht."); 
+
+
+//Task 4 for Lab 3
+
+
+const PI = 3.14;
+
+var d = parseFloat(prompt("Diameter of circle?", ""));
+
+//The area of a circle is technically pi times radius^2, but we are currently dealing with diameter. Just divide diameter by 2 first.
+
+function areaCircle(d) {
+	return (PI) * ((d / 2) * (d / 2));
+}
+
+alert("The area of a circle with diameter " + d + " is " + areaCircle(d) + " units.");
+
+
+</script>
+
+</body>
+
+</html>

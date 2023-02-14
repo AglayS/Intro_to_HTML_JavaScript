@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<head>
+<title>Lab 4</title>
+</head>
+
+<body>
+
+<script>
+
+//Task 1
+
+/* MY PLAN: First, declare my variables. Two will do, i and j. Next, initialize with for (using while breaks it), and write out conditions for variable i (don't forget increments!). 
+Next, make a nested for loop with variable j and write out conditions for that. Under the inner for loop should be something that displays '*', and a line break somewhere afterwards. */ 
+
+var i; //First variable declared
+var j; //Second variable declared
+
+for (var i = 1; i <= 7; i++) { //For loop for definitive action. Using while loop would not display anything.
+	
+	for (var j = 1; j <= i; j++) { //7 rows of asterisks with increments
+	
+	document.write('#'); //For each character space (j), there is a # to fill in.	
+	
+	}
+	document.write("<br />"); //For spacing each row (i). Without it, it's just a line of asterisks.
+}
+
+
+
+//Task 2 and 3 combined
+
+/* MY PLAN: Variable i is already declared, and it won't affect the first task, so no worries there. Because it's 1-100, 
+the for loop must contain a condition to satisfy this (&& will work, don't forget increments!) Integers need to be divided with zero as remainder, so % will work with i. 
+3 is with "Fizz", 5 is with "Buzz". Else if will work within the for loop. Make sure that if being divided by 3 or 5 doesn't work out then to just display i. 
+AND ALSO, if something can be divided by both 3 and 5 to put FizzBuzz. */
+
+
+for (var i = 1; (i < 101) && (i >= 1); i++) { //For var i, must be 1-100.
+	
+	if (i % 15 == 0) { //For when i can be divided by both 3 and 5.
+
+	document.write("FizzBuzz<br />");
+	
+	}
+	else if (i % 3 == 0) { //For dividing by 3.
+	
+	document.write("Fizz<br />");
+	
+	}
+	else if (i % 5 == 0) { //For dividing by 5.
+	
+	document.write("Buzz<br />");
+
+	}
+	else { //For when i does not divide evenly by any number.
+	
+	document.write(i);
+
+	document.write("<br />"); //Readability.
+	
+	}
+	
+}
+
+</script>
+
+<br>
+
+<script>
+
+
+//Task 4
+
+
+/*MY PLAN: Isn't it sort of similar to the first task? Well, first declare some new variables, especially since I need a prompt for the size. Do something similar to the first task,
+but remember that there's a certain pattern to it so account for that later. And line breaks so it doesn't look weird.*/
+
+var board = " "; //Initializing so it'll work later.
+
+var size = prompt("Enter chessboard size", ""); //Prompt needed from viewer.
+
+for (var j = 0; j < size; j++) { //Using <= would make it too big.
+	for (var i = 0; i < size; i++) {
+		if ((i + j) % 2 == 0) { //% 2 because two characters are used.
+		board += " " + '&nbsp'; //Without the &nbsp, there was no way I could make it go in the pattern it's currently at.
+		}
+		else {
+		board += "#"; //One of the characters needed for board.
+		}
+	}
+	board += "<br />"; //Looks weird without it.
+}
+document.write(board); //For it to actually display and work correctly.
+
+
+
+</script>
+
+</body>
+
+
+</html>
